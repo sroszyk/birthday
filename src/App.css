@@ -1,0 +1,414 @@
+/* =====================
+   Screen Wrapper & Transitions
+   ===================== */
+.screen-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.screen-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.screen-wrapper.hidden {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* =====================
+   Common Screen Layout
+   ===================== */
+.screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  min-height: 100dvh;
+  text-align: center;
+}
+
+/* =====================
+   Buttons
+   ===================== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 48px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: linear-gradient(135deg, #e8a0bf 0%, #c47ab7 50%, #a05aa0 100%);
+  border-radius: 50px;
+  box-shadow: var(--shadow-btn);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+  border: none;
+  min-width: 200px;
+  font-family: var(--font-main);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(196, 122, 183, 0.5);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-btn);
+}
+
+/* =====================
+   Loading
+   ===================== */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  font-size: 2rem;
+  color: var(--color-primary);
+  font-family: var(--font-main);
+}
+
+/* =====================
+   START SCREEN
+   ===================== */
+.start-screen {
+  gap: 48px;
+  background: transparent;
+}
+
+.heart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 8px 32px rgba(196, 122, 183, 0.45));
+  transition: transform 0.1s ease;
+}
+
+.heart-container svg {
+  width: clamp(160px, 40vw, 280px);
+  height: clamp(160px, 40vw, 280px);
+}
+
+.heart-container.spinning {
+  animation: heartSpin 0.7s ease-in-out forwards;
+}
+
+@keyframes heartSpin {
+  0%   { transform: rotate(0deg) scale(1); }
+  40%  { transform: rotate(200deg) scale(1.1); }
+  70%  { transform: rotate(340deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.start-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  margin-top: -24px;
+}
+
+/* =====================
+   RULES SCREEN
+   ===================== */
+.rules-screen {
+  justify-content: flex-start;
+  padding: 40px 20px 36px;
+  gap: 0;
+}
+
+.rules-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 40px 32px 36px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid rgba(232, 160, 191, 0.3);
+}
+
+.rules-title {
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+}
+
+.rules-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.rules-text {
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  line-height: 1.75;
+  color: var(--color-text);
+  white-space: pre-line;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* =====================
+   STEP SCREEN
+   ===================== */
+.step-screen {
+  justify-content: flex-start;
+  padding: 32px 20px 36px;
+  gap: 0;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 36px 28px 32px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border: 1px solid rgba(232, 160, 191, 0.3);
+}
+
+.step-indicator {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.step-content-text {
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  line-height: 1.75;
+  color: var(--color-text);
+  white-space: pre-line;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.step-image-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9e8f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 320px;
+  box-shadow: 0 2px 12px rgba(196, 122, 183, 0.15);
+}
+
+.step-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+}
+
+/* =====================
+   CODE INPUT
+   ===================== */
+.code-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.code-label {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+  font-style: italic;
+}
+
+.code-inputs {
+  display: flex;
+  gap: clamp(6px, 2vw, 14px);
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.code-digit {
+  width: clamp(42px, 13vw, 64px);
+  height: clamp(52px, 16vw, 76px);
+  border: 2px solid rgba(196, 122, 183, 0.4);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-family: var(--font-main);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  -moz-appearance: textfield;
+}
+
+.code-digit::-webkit-outer-spin-button,
+.code-digit::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.code-digit:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(196, 122, 183, 0.2);
+  transform: scale(1.06);
+}
+
+.code-digit.error {
+  border-color: var(--color-error) !important;
+  box-shadow: 0 0 0 3px rgba(224, 82, 82, 0.18) !important;
+}
+
+.code-digit.shake {
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
+
+.validation-msg {
+  font-size: 1rem;
+  color: var(--color-error);
+  letter-spacing: 0.02em;
+  animation: fadeInUp 0.25s ease forwards;
+  min-height: 1.4em;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================
+   FINAL SCREEN
+   ===================== */
+.final-screen {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 24px;
+  gap: 0;
+  background: #07000f;
+}
+
+.fireworks-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.final-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 100dvh;
+  padding: 40px 24px;
+}
+
+.final-card {
+  background: rgba(20, 5, 30, 0.75);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 44px 40px;
+  max-width: 540px;
+  width: 100%;
+  border: 1px solid rgba(248, 180, 217, 0.25);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 60px rgba(200, 100, 200, 0.12);
+  animation: fadeInScale 0.8s ease forwards;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.final-heart {
+  font-size: 3.5rem;
+  animation: heartPulse 1.6s ease-in-out infinite;
+  display: block;
+  margin-bottom: 8px;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.15); }
+}
+
+.final-text {
+  font-size: clamp(1.2rem, 3.5vw, 1.55rem);
+  line-height: 1.8;
+  color: #f8d0e8;
+  white-space: pre-line;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+@media (max-width: 420px) {
+  .rules-card,
+  .step-card {
+    padding: 28px 18px 24px;
+    gap: 20px;
+  }
+
+  .btn-primary {
+    padding: 14px 36px;
+    font-size: 1.25rem;
+    min-width: 160px;
+  }
+
+  .final-card {
+    padding: 32px 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .screen {
+    padding: 48px 40px;
+  }
+
+  .rules-screen,
+  .step-screen {
+    justify-content: center;
+  }
+}
