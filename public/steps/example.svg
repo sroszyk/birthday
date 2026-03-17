@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff0f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffe4ee;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f78fb3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c47ab7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8e6cf;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7bd2a5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#bg)" rx="24"/>
+
+  <!-- Decorative circles -->
+  <circle cx="60" cy="60" r="40" fill="#f9c5d1" opacity="0.3"/>
+  <circle cx="440" cy="440" r="50" fill="#dbb4d8" opacity="0.25"/>
+  <circle cx="450" cy="70" r="30" fill="#f9c5d1" opacity="0.2"/>
+  <circle cx="50" cy="430" r="35" fill="#dbb4d8" opacity="0.2"/>
+
+  <!-- Stem -->
+  <path d="M250,390 Q245,330 240,270" stroke="#a8c5a0" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Leaf left -->
+  <ellipse cx="220" cy="320" rx="28" ry="12" fill="url(#leafGrad)" transform="rotate(-30,220,320)" opacity="0.85"/>
+  <!-- Leaf right -->
+  <ellipse cx="255" cy="300" rx="24" ry="10" fill="url(#leafGrad)" transform="rotate(20,255,300)" opacity="0.85"/>
+
+  <!-- Big heart (centered, large) -->
+  <path d="M250,270
+    C250,270 190,235 170,195
+    C152,158 162,120 195,112
+    C215,107 235,118 250,135
+    C265,118 285,107 305,112
+    C338,120 348,158 330,195
+    C310,235 250,270 250,270 Z"
+    fill="url(#heartGrad)"
+    filter="url(#shadow)"/>
+
+  <!-- Heart shine -->
+  <ellipse cx="225" cy="155" rx="18" ry="10" fill="white" opacity="0.25" transform="rotate(-25,225,155)"/>
+
+  <!-- Small decorative hearts -->
+  <path d="M90,150 C90,150 78,141 73,132 C68,123 72,113 80,111 C84,110 88,113 90,117 C92,113 96,110 100,111 C108,113 112,123 107,132 C102,141 90,150 90,150 Z"
+    fill="#e8a0bf" opacity="0.7"/>
+
+  <path d="M410,160 C410,160 398,151 393,142 C388,133 392,123 400,121 C404,120 408,123 410,127 C412,123 416,120 420,121 C428,123 432,133 427,142 C422,151 410,160 410,160 Z"
+    fill="#e8a0bf" opacity="0.6"/>
+
+  <path d="M130,380 C130,380 121,373 117,366 C113,359 116,351 122,349 C125,348 128,351 130,354 C132,351 135,348 138,349 C144,351 147,359 143,366 C139,373 130,380 130,380 Z"
+    fill="#c47ab7" opacity="0.5"/>
+
+  <path d="M370,370 C370,370 361,363 357,356 C353,349 356,341 362,339 C365,338 368,341 370,344 C372,341 375,338 378,339 C384,341 387,349 383,356 C379,363 370,370 370,370 Z"
+    fill="#c47ab7" opacity="0.55"/>
+
+  <!-- Sparkles -->
+  <g fill="#f9c5d1" opacity="0.8">
+    <polygon points="340,90 343,100 353,100 345,106 348,116 340,110 332,116 335,106 327,100 337,100" />
+    <polygon points="160,400 162,407 169,407 163,412 165,419 160,415 155,419 157,412 151,407 158,407" transform="scale(0.8)" transform-origin="160 407"/>
+  </g>
+  <circle cx="340" cy="90" r="3" fill="#f9c5d1" opacity="0.9"/>
+  <circle cx="160" cy="400" r="2.5" fill="#c47ab7" opacity="0.9"/>
+  <circle cx="420" cy="300" r="3" fill="#f78fb3" opacity="0.7"/>
+  <circle cx="80" cy="250" r="2.5" fill="#c47ab7" opacity="0.7"/>
+
+  <!-- Hint text -->
+  <text x="250" y="445" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#9b4dca" text-anchor="middle" opacity="0.9" font-style="italic">Co kryje się w tym miejscu?</text>
+  <text x="250" y="470" font-family="Georgia, 'Times New Roman', serif" font-size="15" fill="#c47ab7" text-anchor="middle" opacity="0.7">Wskazówka nr 2 ❤️</text>
+</svg>

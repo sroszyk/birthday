@@ -1,0 +1,36 @@
+{
+  "rules": {
+    "title": "Zasady Gry",
+    "text": "Moja najdroższa,\n\nCzeka na Ciebie wyjątkowa przygoda — urodzinowa gra pełna wspomnień i niespodzianek, stworzona tylko dla Ciebie.\n\nKażdy krok skrywa zagadkę, której odpowiedź zna tylko nasze serce. Odgadnij tajny kod i podążaj dalej przez naszą wspólną historię.\n\nPamiętaj: wszystkie odpowiedzi kryją się w momentach, które przeżyliśmy razem ❤️\n\nGotowa?",
+    "buttonText": "Zaczynamy"
+  },
+  "steps": [
+    {
+      "id": "step1",
+      "type": "text",
+      "content": "Nasza historia zaczęła się pewnego wiosennego dnia. Pamiętasz datę naszej pierwszej randki? To było 12 kwietnia — dzień, kiedy wszystko się zmieniło.\n\nWpisz tę datę jako czterocyfrowy kod (DDMM).",
+      "code": "1204",
+      "buttonText": "Dalej",
+      "validationMessage": "Hmm, to nie ten kod... Pomyśl o naszej pierwszej randce 🌸"
+    },
+    {
+      "id": "step2",
+      "type": "image",
+      "content": "steps/example.svg",
+      "code": "753",
+      "buttonText": "Następny krok",
+      "validationMessage": "Prawie! Ale nie tym razem... Przyjrzyj się uważniej 🔍"
+    },
+    {
+      "id": "step3",
+      "type": "text",
+      "content": "Trzy cyfry, trzy powody, dla których jestem najszczęśliwszą osobą na świecie:\n\n1. Twój uśmiech o poranku\n2. Twój śmiech, który rozjaśnia każdy dzień\n3. To, że jesteś przy mnie\n\nWpisz liczbę kroków na naszym pierwszym wspólnym spacerze po lesie — pamiętasz, że policzyłaś 753 kroki do polany?",
+      "code": "753",
+      "buttonText": "Ostatni krok!",
+      "validationMessage": "Nie, to nie to... Wróć myślami do tamtego spaceru 🌿"
+    }
+  ],
+  "final": {
+    "text": "Kocham Cię\ncałym sercem!\n\nDziś świętujemy Ciebie —\nTwój uśmiech, Twoją dobroć,\nTwoją niepowtarzalną duszę.\n\nNiech ten rok przyniesie Ci\nwszystko, o czym marzysz.\n\nSzczęśliwych Urodzin,\nmoja miłości! 🎂✨"
+  }
+}
