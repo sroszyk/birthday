@@ -82,8 +82,40 @@
       "type": "image",
       "content": "steps/dubrownik.jpg",
       "code": "2021",
-      "buttonText": "Cyk i lecimy!",
+      "buttonText": "Poszło!",
       "validationMessage": "Na pewno pamiętasz! Ten rok był super..."
+    },
+    {
+      "id": "step11",
+      "type": "text",
+      "content": "Po lewej stronie świata",
+      "code": "8877",
+      "buttonText": "Mam!",
+      "validationMessage": "A gdzie my mamy świat w tym domu?"
+    },
+    {
+      "id": "step12",
+      "type": "text",
+      "content": "Same trudne! Chociaż dla Ciebie to pewnie super łatwe.\n Jak myślisz czym można się wozić?",
+      "code": "OPEL",
+      "buttonText": "Jazda!",
+      "validationMessage": "Sama to pisałaś i nie pamiętasz?"
+    },
+    {
+      "id": "step13",
+      "type": "text",
+      "content": "Teraz będzie mega trudne!\nCoś co było, jest i będzie. Zawsze z nami do końca życia.",
+      "code": "MIŁOŚĆ",
+      "buttonText": "Tak!",
+      "validationMessage": "Na pewno wiesz o co chodzi ❤️"
+    },
+    {
+      "id": "step14",
+      "type": "text",
+      "content": "",
+      "code": "MIŁOŚĆ",
+      "buttonText": "Tak!",
+      "validationMessage": "Na pewno wiesz o co chodzi ❤️"
     },
   ],
   "final": {
