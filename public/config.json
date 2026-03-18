@@ -64,7 +64,7 @@
     {
       "id": "step8",
       "type": "text",
-      "content": "Gratulacje! Moja mała truskaweczko\nJest na świecie takie miejsce, które wszystkim kojarzy się ze starymi rzeczami. Natomiast dla nas jest miejsce czegoś nowego i wiecznego.",
+      "content": "Gratulacje! Moja mała truskaweczko.\nJest na świecie takie miejsce, które wszystkim kojarzy się ze starymi rzeczami. Natomiast dla nas jest miejsce czegoś nowego i wiecznego.",
       "code": "RZYM",
       "buttonText": "Dalej!",
       "validationMessage": "Blisko, ale źle"
