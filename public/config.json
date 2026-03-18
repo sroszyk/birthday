@@ -56,9 +56,9 @@
     {
       "id": "step7",
       "type": "image",
-      "content": "steps/phone.png",
-      "code": "8567",
-      "buttonText": "Jedziemy",
+      "content": "steps/phone.jpeg",
+      "code": "9463",
+      "buttonText": "Wiem!",
       "validationMessage": "Czasami wystarczy tylko poczekać"
     }
   ],
