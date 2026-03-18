@@ -15,11 +15,11 @@
     },
     {
       "id": "step2",
-      "type": "image",
-      "content": "steps/example.svg",
-      "code": "753",
-      "buttonText": "Następny krok",
-      "validationMessage": "Prawie! Ale nie tym razem... Przyjrzyj się uważniej 🔍"
+      "type": "text",
+      "content": "Nie było takie trudne prawda? Teraz czas na coś troszkę trudniejszego\n\n Jest to nasz największy skarb, chociaż nie jest taki wielki.",
+      "code": "FRANEK",
+      "buttonText": "Dalej",
+      "validationMessage": "Oj Misiek, przecież wiesz..."
     },
     {
       "id": "step3",
