@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 
-export default function StepScreen({ step, stepNumber, totalSteps, onNext }) {
+export default function StepScreen({ step, onNext }) {
   const codeLength = step.code.length
   const [digits, setDigits] = useState(Array(codeLength).fill(''))
   const [error, setError] = useState(false)
@@ -97,9 +97,26 @@ export default function StepScreen({ step, stepNumber, totalSteps, onNext }) {
   return (
     <div className="screen step-screen">
       <div className="step-card">
-        <p className="step-indicator">
-          Krok {stepNumber} z {totalSteps}
-        </p>
+        <div className="step-ornament" aria-hidden="true">
+          <svg viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="8" y1="20" x2="76" y2="20" stroke="url(#ornGrad)" strokeWidth="1.5" strokeLinecap="round"/>
+            <circle cx="24" cy="20" r="2.5" fill="url(#ornGrad)"/>
+            <circle cx="42" cy="20" r="2" fill="url(#ornGrad)" opacity="0.65"/>
+            <circle cx="60" cy="20" r="2.5" fill="url(#ornGrad)"/>
+            <path d="M100 9 L102.9 17.6 L112 17.6 L104.5 22.8 L107.4 31.4 L100 26.2 L92.6 31.4 L95.5 22.8 L88 17.6 L97.1 17.6 Z" fill="url(#ornGrad)"/>
+            <circle cx="140" cy="20" r="2.5" fill="url(#ornGrad)"/>
+            <circle cx="158" cy="20" r="2" fill="url(#ornGrad)" opacity="0.65"/>
+            <circle cx="176" cy="20" r="2.5" fill="url(#ornGrad)"/>
+            <line x1="124" y1="20" x2="192" y2="20" stroke="url(#ornGrad)" strokeWidth="1.5" strokeLinecap="round"/>
+            <defs>
+              <linearGradient id="ornGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#e8a0bf"/>
+                <stop offset="50%" stopColor="#c47ab7"/>
+                <stop offset="100%" stopColor="#a05aa0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
 
         {step.type === 'text' ? (
           <p className="step-content-text">{step.content}</p>
@@ -107,7 +124,7 @@ export default function StepScreen({ step, stepNumber, totalSteps, onNext }) {
           <div className="step-image-wrapper">
             <img
               src={`${import.meta.env.BASE_URL}${step.content}`}
-              alt={`Wskazówka ${stepNumber}`}
+              alt={`Wskazówka - ${step.id}`}
             />
           </div>
         )}
