@@ -244,15 +244,9 @@
   font-style: italic;
 }
 
-.code-inputs {
-  display: flex;
-  gap: clamp(6px, 2vw, 14px);
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-
-.code-digit {
-  width: clamp(42px, 13vw, 64px);
+.code-input {
+  width: 100%;
+  max-width: 320px;
   height: clamp(52px, 16vw, 76px);
   border: 2px solid rgba(196, 122, 183, 0.4);
   border-radius: 12px;
@@ -262,29 +256,26 @@
   font-weight: 600;
   color: var(--color-accent);
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0 12px;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
-  -moz-appearance: textfield;
+  overflow-x: auto;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.code-digit::-webkit-outer-spin-button,
-.code-digit::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.code-digit:focus {
+.code-input:focus {
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(196, 122, 183, 0.2);
-  transform: scale(1.06);
 }
 
-.code-digit.error {
+.code-input.error {
   border-color: var(--color-error) !important;
   box-shadow: 0 0 0 3px rgba(224, 82, 82, 0.18) !important;
 }
 
-.code-digit.shake {
+.code-input.shake {
   animation: shake 0.4s ease;
 }
 
