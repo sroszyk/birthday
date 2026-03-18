@@ -24,10 +24,42 @@
     {
       "id": "step3",
       "type": "text",
-      "content": "Trzy cyfry, trzy powody, dla których jestem najszczęśliwszą osobą na świecie:\n\n1. Twój uśmiech o poranku\n2. Twój śmiech, który rozjaśnia każdy dzień\n3. To, że jesteś przy mnie\n\nWpisz liczbę kroków na naszym pierwszym wspólnym spacerze po lesie — pamiętasz, że policzyłaś 753 kroki do polany?",
-      "code": "753",
-      "buttonText": "Ostatni krok!",
-      "validationMessage": "Nie, to nie to... Wróć myślami do tamtego spaceru 🌿"
+      "content": "To było chyba za łatwe.\n Tym razem troszkę matematyki\nx*10+25\n x - to liczba krzeseł w naszym domku",
+      "code": "115",
+      "buttonText": "Pliczone!",
+      "validationMessage": "Ups.. policz WSZYSTKIE krzesła"
+    },
+    {
+      "id": "step4",
+      "type": "text",
+      "content": "Przepraszam za to liczenie. Grunt, że się udało!\nCzy pamiętasz w jakim mieście rozpoczęła się nasza przygoda?",
+      "code": "KRAKÓW",
+      "buttonText": "Jedziemy",
+      "validationMessage": "To drugie miasto"
+    },
+    {
+      "id": "step5",
+      "type": "text",
+      "content": "Teraz czeka Cię wycieczka, bo ten kod schowałem w Pizie",
+      "code": "8567",
+      "buttonText": "Jedziemy",
+      "validationMessage": "Ta Piza jest w naszym domu"
+    },
+    {
+      "id": "step6",
+      "type": "text",
+      "content": "Teraz czeka Cię wycieczka, bo ten kod schowałem w Pizie",
+      "code": "8567",
+      "buttonText": "Jedziemy",
+      "validationMessage": "Ta Piza jest w naszym domu"
+    },
+    {
+      "id": "step7",
+      "type": "image",
+      "content": "steps/phone.png",
+      "code": "8567",
+      "buttonText": "Jedziemy",
+      "validationMessage": "Czasami wystarczy tylko poczekać"
     }
   ],
   "final": {
