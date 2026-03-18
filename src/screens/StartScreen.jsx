@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 function HeartSVG() {
   return (
     <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -36,26 +34,15 @@ function HeartSVG() {
 }
 
 export default function StartScreen({ onStart }) {
-  const [spinning, setSpinning] = useState(false)
-
-  const handleStart = () => {
-    if (spinning) return
-    setSpinning(true)
-    setTimeout(() => {
-      onStart()
-    }, 600)
-  }
-
   return (
     <div className="screen start-screen">
-      <div className={`heart-container ${spinning ? 'spinning' : ''}`}>
+      <div className="heart-container">
         <HeartSVG />
       </div>
       <p className="start-subtitle">dla Ciebie, z miłością ❤</p>
       <button
         className="btn-primary"
-        onClick={handleStart}
-        disabled={spinning}
+        onClick={onStart}
       >
         Start
       </button>

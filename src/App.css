@@ -93,23 +93,11 @@
   align-items: center;
   justify-content: center;
   filter: drop-shadow(0 8px 32px rgba(196, 122, 183, 0.45));
-  transition: transform 0.1s ease;
 }
 
 .heart-container svg {
   width: clamp(160px, 40vw, 280px);
   height: clamp(160px, 40vw, 280px);
-}
-
-.heart-container.spinning {
-  animation: heartSpin 0.7s ease-in-out forwards;
-}
-
-@keyframes heartSpin {
-  0%   { transform: rotate(0deg) scale(1); }
-  40%  { transform: rotate(200deg) scale(1.1); }
-  70%  { transform: rotate(340deg) scale(1.05); }
-  100% { transform: rotate(360deg) scale(1); }
 }
 
 .start-subtitle {
