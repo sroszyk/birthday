@@ -1,11 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'
+import StartScreen from './screens/StartScreen'
 import RulesScreen from './screens/RulesScreen'
 import StepScreen from './screens/StepScreen'
 import FinalScreen from './screens/FinalScreen'
 import './App.css'
 
 function App() {
-  const [screen, setScreen] = useState('rules')
+  const [screen, setScreen] = useState('start')
   const [stepIndex, setStepIndex] = useState(0)
   const [config, setConfig] = useState(null)
   const [visible, setVisible] = useState(true)
@@ -32,6 +33,9 @@ function App() {
 
   return (
     <div className={`screen-wrapper ${visible ? 'visible' : 'hidden'}`}>
+      {screen === 'start' && (
+        <StartScreen onStart={() => navigate('rules')} />
+      )}
       {screen === 'rules' && (
         <RulesScreen config={config.rules} onContinue={() => navigate('step', 0)} />
       )}
