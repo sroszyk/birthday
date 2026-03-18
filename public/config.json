@@ -1,7 +1,7 @@
 {
   "rules": {
     "title": "Zasady Gry",
-    "text": "Kochana Madziu!\n\nJest mi bardzo przykro, że nie mogę być z Tobą w ten szczególny dzień Twoich urodzin. Postanowiłem, że stworzę dla Ciebie wyjątkową grę.\n\n1.Kod to liczba lub słowo\n2.Kod może nadejść z niespodziewanej strony\n3.Masz dwa koła ratunkowe w postaci sms'a do mnie\n4.Niektóre odpowiedzi nie są oczywiste\n5.Możesz wprowadzać odpowiedź wiele razy\n\n ❤️\n\nGotowa?",
+    "text": "Kochana Madziu!\n\nJest mi bardzo przykro, że nie mogę być z Tobą w ten szczególny dzień Twoich urodzin. Postanowiłem, że stworzę dla Ciebie wyjątkową grę.\n\n1.Kod to liczba lub słowo\n2.Kod może nadejść z niespodziewanej strony\n3.Masz jedno koło ratunkowe w postaci sms'a do mnie\n4.Niektóre odpowiedzi nie są oczywiste\n5.Możesz wprowadzać odpowiedź wiele razy\n\n ❤️\n\nGotowa?",
     "buttonText": "Zaczynamy"
   },
   "steps": [
@@ -26,7 +26,7 @@
       "type": "text",
       "content": "To było chyba za łatwe.\n Tym razem troszkę matematyki\nx*10+25\n x - to liczba krzeseł w naszym domku",
       "code": "115",
-      "buttonText": "Pliczone!",
+      "buttonText": "Policzone!",
       "validationMessage": "Ups.. policz WSZYSTKIE krzesła"
     },
     {
@@ -42,25 +42,49 @@
       "type": "text",
       "content": "Teraz czeka Cię wycieczka, bo ten kod schowałem w Pizie",
       "code": "8567",
-      "buttonText": "Jedziemy",
+      "buttonText": "Faktycznie",
       "validationMessage": "Ta Piza jest w naszym domu"
     },
     {
       "id": "step6",
-      "type": "text",
-      "content": "Teraz czeka Cię wycieczka, bo ten kod schowałem w Pizie",
-      "code": "8567",
-      "buttonText": "Jedziemy",
-      "validationMessage": "Ta Piza jest w naszym domu"
-    },
-    {
-      "id": "step7",
       "type": "image",
       "content": "steps/phone.jpeg",
       "code": "9463",
       "buttonText": "Wiem!",
       "validationMessage": "Czasami wystarczy tylko poczekać"
-    }
+    },
+    {
+      "id": "step7",
+      "type": "text",
+      "content": "Teraz będzie rymowanka,\nI dla Ciebie i dla Franka,\nOna Twoja ukochana\nCzerwień nosi po kolana\nChociaż wiele ich na świecie\nTo najchętniej z Polski jecie\n",
+      "code": "TRUSKAWKA",
+      "buttonText": "Odgadłam!",
+      "validationMessage": "Przykro mi, ale to nie to"
+    },
+    {
+      "id": "step8",
+      "type": "text",
+      "content": "Gratulacje! Moja mała truskaweczko\nJest na świecie takie miejsce, które wszystkim kojarzy się ze starymi rzeczami. Natomiast dla nas jest miejsce czegoś nowego i wiecznego.",
+      "code": "RZYM",
+      "buttonText": "Dalej!",
+      "validationMessage": "Blisko, ale źle"
+    },
+    {
+      "id": "step9",
+      "type": "text",
+      "content": "Kochałaś to robić jako mała dziewczynka. Nadal to kochasz!",
+      "code": "TANIEC",
+      "buttonText": "Cyk i lecimy!",
+      "validationMessage": "Pomyśl dobrze Kochanie"
+    },
+    {
+      "id": "step10",
+      "type": "image",
+      "content": "steps/dubrownik.jpg",
+      "code": "2021",
+      "buttonText": "Cyk i lecimy!",
+      "validationMessage": "Na pewno pamiętasz! Ten rok był super..."
+    },
   ],
   "final": {
     "text": "Kocham Cię\ncałym sercem!\n\nDziś świętujemy Ciebie —\nTwój uśmiech, Twoją dobroć,\nTwoją niepowtarzalną duszę.\n\nNiech ten rok przyniesie Ci\nwszystko, o czym marzysz.\n\nSzczęśliwych Urodzin,\nmoja miłości! 🎂✨"
