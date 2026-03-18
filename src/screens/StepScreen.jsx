@@ -15,7 +15,7 @@ export default function StepScreen({ step, stepNumber, totalSteps, onNext }) {
   }, [])
 
   const handleChange = (index, e) => {
-    const raw = e.target.value.replace(/\D/g, '')
+    const raw = e.target.value.toUpperCase().replace(/\s/g, '')
     const val = raw.slice(-1)
     const newDigits = [...digits]
 
@@ -63,13 +63,14 @@ export default function StepScreen({ step, stepNumber, totalSteps, onNext }) {
 
   const handlePaste = (e) => {
     e.preventDefault()
-    const pasted = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, codeLength)
+    const pasted = e.clipboardData.getData('text').toUpperCase().replace(/\s/g, '').slice(0, codeLength)
     if (!pasted) return
     const newDigits = [...digits]
     for (let i = 0; i < pasted.length; i++) {
       newDigits[i] = pasted[i]
     }
     setDigits(newDigits)
+    setError(false)
     const nextFocus = Math.min(pasted.length, codeLength - 1)
     inputRefs.current[nextFocus]?.focus()
   }
@@ -80,7 +81,7 @@ export default function StepScreen({ step, stepNumber, totalSteps, onNext }) {
       triggerError()
       return
     }
-    if (entered === step.code) {
+    if (entered.toUpperCase() === step.code.toUpperCase()) {
       onNext()
     } else {
       triggerError()
@@ -119,15 +120,16 @@ export default function StepScreen({ step, stepNumber, totalSteps, onNext }) {
                 key={i}
                 ref={(el) => (inputRefs.current[i] = el)}
                 type="text"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                maxLength={2}
+                autoCapitalize="characters"
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck="false"
+                maxLength={1}
                 value={digit}
                 className={`code-digit${error ? ' error' : ''}${shaking ? ' shake' : ''}`}
                 onChange={(e) => handleChange(i, e)}
                 onKeyDown={(e) => handleKeyDown(i, e)}
                 onInput={(e) => handleInput(i, e)}
-                autoComplete="off"
               />
             ))}
           </div>
