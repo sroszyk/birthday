@@ -178,12 +178,16 @@
   border: 1px solid rgba(232, 160, 191, 0.3);
 }
 
-.step-indicator {
-  font-size: 0.95rem;
-  color: var(--color-text-light);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 500;
+.step-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.step-ornament svg {
+  width: clamp(140px, 60%, 220px);
+  height: auto;
 }
 
 .step-content-text {
