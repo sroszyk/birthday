@@ -112,10 +112,18 @@
     {
       "id": "step14",
       "type": "text",
-      "content": "",
-      "code": "MIŁOŚĆ",
-      "buttonText": "Tak!",
-      "validationMessage": "Na pewno wiesz o co chodzi ❤️"
+      "content": "Ten dzień zostanie z nami na zawsze!",
+      "code": "2209",
+      "buttonText": "Poszło!",
+      "validationMessage": "👶"
+    },
+    {
+      "id": "step15",
+      "type": "image",
+      "content": "steps/kwiaty.jpg",
+      "code": "5489",
+      "buttonText": "Udało się!",
+      "validationMessage": "Przykro mi, ale nie"
     },
   ],
   "final": {
