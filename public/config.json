@@ -8,10 +8,10 @@
     {
       "id": "step1",
       "type": "text",
-      "content": "Nasza historia zaczęła się pewnego wiosennego dnia. Pamiętasz datę naszej pierwszej randki? To było 12 kwietnia — dzień, kiedy wszystko się zmieniło.\n\nWpisz tę datę jako czterocyfrowy kod (DDMM).",
-      "code": "1204",
+      "content": "Zacznijmy od czegoś prostego na rozgrzewkę.\nDzień w którym przybyło Ci jedno kółko oraz straciłaś coś co miałaś od urodzenia.\n\nWpisz tę datę jako w formacie (DDMMYY).",
+      "code": "110822",
       "buttonText": "Dalej",
-      "validationMessage": "Hmm, to nie ten kod... Pomyśl o naszej pierwszej randce 🌸"
+      "validationMessage": "Niestety to nie to 👰"
     },
     {
       "id": "step2",
